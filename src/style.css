@@ -1,0 +1,286 @@
+/* @font-face {
+  font-family: Notes;
+  src: url('./fonts/NotesEsaBol.otf'), 
+  url('./fonts/NotesEsaBolIta.otf'), 
+  url('./fonts/NotesEsaReg'),
+  url('./fonts/NotesEsaRegIta.otf');
+} */
+
+@font-face {
+
+  font-family: 'NotesEsa';
+  src: url('./fonts/NotesEsaBol.otf'), 
+  url('./fonts/NotesEsaBolIta.otf'), 
+  url('./fonts/NotesEsaReg.otf'),
+  url('./fonts/NotesEsaRegIta.otf');
+  }
+
+body {
+    background-color: rgb(0, 50, 71);
+    font-family: 'NotesEsa';
+  }
+  
+  body section{
+    
+    min-height: 90vmin;
+    width: 100%;
+  }
+  .container-fluid
+{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* body {
+    background-color: rgb(60, 50, 71);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }*/
+  
+  body .angles {
+    background: linear-gradient(to right, #a6afc0 2px, transparent 2px) 0 0, linear-gradient(to bottom, #a6afc0 2px, transparent 2px) 0 0, linear-gradient(to left, #a6afc0 2px, transparent 2px) 100% 0, linear-gradient(to bottom, #a6afc0 2px, transparent 2px) 100% 0, linear-gradient(to left, #a6afc0 2px, transparent 2px) 100% 100%, linear-gradient(to top, #a6afc0 2px, transparent 2px) 100% 100%, linear-gradient(to right, #a6afc0 2px, transparent 2px) 0 100%, linear-gradient(to top, #a6afc0 2px, transparent 2px) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    transition: background-size 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  
+  .angles:hover {
+    background-size: 40px 40px;
+  }
+  .carousel-indicators{
+    transform: translateY(50px);
+  } 
+  
+  section .card{
+    width: 330px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  
+  section .card:hover{
+    transform: translateY(-35px);
+    /* background-color: rgba(0, 50, 71 ,0.5); */
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    /* color: white; */
+  }
+  
+  section .card img{
+    width: 330px;
+    height: 220px;
+  }
+  
+  
+  section .card h4{
+    font-weight: 600;
+  }
+  
+  section.card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  section .card a {
+    font-weight: 500;
+    text-decoration: none;
+    
+  }
+
+  .cardCountdown {
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    padding: 6px;
+  }
+  
+  video {
+    margin: 0 auto;
+    width: 100vw;
+    height: 98vh;
+    object-fit: fill;
+    background-color: black;
+    
+}
+.zoom
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}
+
+.timeline
+{
+    position: absolute;
+    top: 37%;
+    left: 32%;
+    color: white;
+}
+
+.timeline2
+{
+    position: absolute;
+    top: 53%;
+    left: 76%;
+    color: white;
+}
+
+.hubble-distance
+{
+    position: absolute;
+    top: 41%;
+    left: 33.5%;
+    color: white;
+}
+
+.moon-distance
+{
+    position: absolute;
+    top: 47%;
+    left: 38%;
+    color: white;
+}
+
+.l2-distance
+{
+    position: absolute;
+    top: 51%;
+    left: 56%;
+    color: white;
+}
+
+.timeOut{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 10px;
+  border-radius: 4px;
+  background: #00000077;
+  border: 1px solid #ffffff77;
+  color: #ffffff;
+  line-height: 1.3em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.loading-bar
+{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0.3);
+    transform-origin: top left;
+    transition: transform 0.5s;
+}
+
+.loading-bar.ended
+{
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform 1.5s ease-in-out;
+}
+
+.logo-start{
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+
+}
+
+
+
+.point
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.point .label
+{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #00000077;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: help;
+    transform: scale(0, 0);
+    transition: transform 0.3s;
+}
+
+.point .text
+{
+    position: absolute;
+    top: 30px;
+    left: -200px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #000000aa;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
+    line-height: 1.3em;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.point:hover .text
+{
+    opacity: 1;
+}
+
+.point.visible .label
+{
+    transform: scale(1, 1);
+}
+
+.stop {
+  align-items: center;
+  justify-content: center;
+  
+  padding: 10px;
+  border-radius: 4px;
+  background: #00000077;
+  border: 1px solid #ffffff77;
+  color: #ffffff;
+  line-height: 1.3em;
+  font-weight: 100;
+  font-size: 14px;
+}
