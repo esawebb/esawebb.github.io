@@ -549,6 +549,34 @@ const geometry = new THREE.BufferGeometry().setFromPoints(points);
 const line = new THREE.Line(geometry, material);
 scene3.add(line);
 
+const pointsLine = [
+    {
+        //                            z   y  x
+        position: new THREE.Vector3(0, 0, 17),
+        element: document.querySelector('.pointLine-0')
+    },
+    {
+        //                            z   y  x
+        position: new THREE.Vector3(0, 0, 8),
+        element: document.querySelector('.pointLine-1')
+    },
+    {
+        //                            z   y  x
+        position: new THREE.Vector3(0, 0, 1),
+        element: document.querySelector('.pointLine-2')
+    },
+    {
+        //                            z   y  x
+        position: new THREE.Vector3(0, 0, -1),
+        element: document.querySelector('.pointLine-3')
+    },
+    {
+        //                            z   y  x
+        position: new THREE.Vector3(0, 0, -3),
+        element: document.querySelector('.pointLine-4')
+    },
+
+]
 // ////////////////// line Moon
 // const materialMoon = new THREE.LineBasicMaterial({
 //     color: 0xffffff
@@ -644,6 +672,7 @@ document.getElementById("distance").addEventListener("click", () => {
         camera.position.z = 8;
         distance = true;
         document.getElementById('timeNone').classList.add('d-none');
+        document.getElementById('statistics').style.visibility= 'visible';
     }
 
     
@@ -755,6 +784,17 @@ function animate() {
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.height * 0.5
         pointModel.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`
+        
+    }
+
+    for(const pointLine of pointsLine)
+    {
+        const screenPositionLine = pointLine.position.clone()
+        screenPositionLine.project(camera)
+
+        const translateLineX = screenPositionLine.x * sizes.width * 0.5
+        const translateLineY = - screenPositionLine.y * sizes.height * 0.5
+        pointLine.element.style.transform = `translateX(${translateLineX}px) translateY(${translateLineY}px)`
         
     }
     // if (cursor.y>0.05){

@@ -61,47 +61,32 @@
             </a>
         </div>
 
-        <!-- <div class="text2 row pt-3 visible" style="display: none;">
-            <div class="col-4 col-xl-3 d-none d-lg-block">
-                <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/webb-far.jpg?itok=Q3pwkHnk"
-                class=" rounded mb-3" />
-            </div>
-            <div class="col-12 col-lg-8 col-xl-9">
-                <h4 class="text-center">Primary mirror</h4>
-                <h6>The telescope’s primary mirror is made of 18 hexagonal-shaped mirror segments, each 1.32 metres in
-                diameter and weighing approximately 20 kilograms. The total diameter of Webb’s primary mirror spans
-                6.5 metres, which is so large that it has to be carefully folded into the rocket’s fairing for
-                launch. Each of the telescope's mirrors is covered in a microscopically thin layer of gold, which
-                optimises them for reflecting infrared light – the primary wavelength of light this telescope will
-                observe.</h6>
-            </div> -->
-
-        </div>
-
         <div class="point point-1 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint2">
+
+            </a>
         </div>
         <div class="point point-2 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-        </div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint3">
+
+            </a>     </div>
         <div class="point point-3 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-        </div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint1">
+
+            </a>  </div>
         <div class="point point-4 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint4">
+
+            </a>
         </div>
         <div class="point point-5 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-        </div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint5">
+
+            </a></div>
         <div class="point point-6 visible" style="display: none;">
-            <div class="label"></div>
-            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-        </div>
+            <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint6">
+
+            </a></div>
     </section>
     <!----------------------- end model ------------------------------------>
 
@@ -112,7 +97,7 @@
     <!----------------------- end video ------------------------------------>
 
     <!----------------------- timeline ------------------------------------>
-    <section id="scene 3 timeline" class="container-fluid" style="position:relative;">
+    <section id="scene 3 timeline" class="container-fluid " style="position:relative;">
         <canvas id="scene3">
 
         </canvas>
@@ -132,6 +117,40 @@
             <a id="distance" type="button" onclick="">
                 <ion-icon name="play" size="large"></ion-icon>
             </a>
+        </div>
+
+        <div class="pointLine pointLine-0 visible">
+            <div class="label"></div>
+            <div class="text">Solar Array Deployment</div>
+        </div>
+
+        <div class="pointLine pointLine-1 visible">
+            <div class="label"></div>
+            <div class="text">Communications Antenna Deployment</div>
+        </div>
+
+        <div class="pointLine pointLine-2 visible">
+            <div class="label"></div>
+            <div class="text">Sunshield Deployment</div>
+        </div>
+
+        <div class="pointLine pointLine-3 visible">
+            <div class="label"></div>
+            <div class="text">Secondary Mirror Deployment</div>
+        </div>
+
+        <div class="pointLine pointLine-4 visible">
+            <div class="label"></div>
+            <div class="text">Primary Mirror Deployment</div>
+        </div>
+
+        <div id="statistics" class="statistics  row text-center " style="visibility: hidden;">
+            <div class="col-6"><h4>Days of travel:</h4></div>
+            <div class="col-6"><h4>200</h4></div>
+            <div class="col-6"><h4>Distance traveled:</h4></div>
+            <div class="col-6"><h4>1 million kilometers</h4></div>
+            
+            
         </div>
     </section>
     <!----------------------- end space ------------------------------------>
@@ -240,11 +259,11 @@
     <section id="social media" class="container">
         <div class="row my-5 ">
             <h4 class="my-5 text-white text-center"><strong>Social Media</strong></h4>
-            <div class="fb-page col-12 col-xl-5 text-center my-3" data-href="https://www.facebook.com/NASAWebb"
-                data-tabs="timeline" data-width="500" data-height="600" data-small-header="false"
-                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/NASAWebb" class="fb-xfbml-parse-ignore"><a
-                        href="https://www.facebook.com/NASAWebb">NASA&#039;s James Webb Space Telescope</a></blockquote>
+            <div class="fb-page col-12 col-xl-5 text-center my-3" data-href="https://www.facebook.com/hubbleESA/"
+                data-tabs="timeline" data-width="500" data-height="600" data-small-header="true"
+                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/hubbleESA/" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/hubbleESA/">Hubble Space Telescope</a></blockquote>
             </div>
             <div class="col-xl-2"></div>
             <div class="fb-page col-12 col-xl-5 text-center my-3">
@@ -331,7 +350,7 @@
                     <h5 class="my-auto col-9"> Turn the music on or off</h5>
 
                 </div>
-                <div class="modal-footer" style="border: none;">
+                <div class="modal-footer justify-content-center" style="border: none;">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
 
                 </div>
@@ -345,15 +364,16 @@
         <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
                 <div class="modal-header " style="border: none;">
-                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Primary mirror</h3>
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Primary Mirror</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="row modal-body ">
                     <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
                         <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/webb-far.jpg?itok=Q3pwkHnk"
-                        class="img-fluid rounded mb-3" style="width: 100%;"/>
+                            class="img-fluid rounded mb-3" style="width: 100%;" />
                     </div>
-                    <p class="pt-2">The telescope’s primary mirror is made of 18 hexagonal-shaped mirror segments, each 1.32 metres
+                    <p class="pt-2">The telescope’s primary mirror is made of 18 hexagonal-shaped mirror segments, each
+                        1.32 metres
                         in
                         diameter and weighing approximately 20 kilograms. The total diameter of Webb’s primary mirror
                         spans
@@ -366,7 +386,7 @@
                     </p>
 
                 </div>
-                <div class="modal-footer" style="border: none;">
+                <div class="modal-footer justify-content-center" style="border: none;">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
 
                 </div>
@@ -374,7 +394,158 @@
         </div>
     </div>
 
+    <!-- Modal  point 1-->
+    <div class="modal fade" id="modalPoint1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Secondary Mirror</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
 
+                    </div>
+                    <p class="pt-2">
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  point 2-->
+    <div class="modal fade" id="modalPoint2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Backplane</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+   
+                    </div>
+                    <p class="pt-2">
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal  point 3-->
+        <div class="modal fade" id="modalPoint3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">ISIM</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+ 
+                    </div>
+                    <p class="pt-2">
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal  point 4-->
+        <div class="modal fade" id="modalPoint4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Sunshield</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+              
+                    </div>
+                    <p class="pt-2">
+
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Modal  point 5-->
+            <div class="modal fade" id="modalPoint5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="modalPoint5Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                    <div class="modal-header " style="border: none;">
+                        <h3 class="modal-title mx-auto" id="modalPoint0Label">Spacecraft Bus</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="row modal-body ">
+                        <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+                  
+                        </div>
+                        <p class="pt-2">
+    
+                        </p>
+    
+                    </div>
+                    <div class="modal-footer justify-content-center" style="border: none;">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Modal  point 6-->
+                <div class="modal fade" id="modalPoint6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="modalPoint6Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                        <div class="modal-header " style="border: none;">
+                            <h3 class="modal-title mx-auto" id="modalPoint0Label">Startrackers</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="row modal-body ">
+                            <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+                      
+                            </div>
+                            <p class="pt-2">
+        
+                            </p>
+        
+                        </div>
+                        <div class="modal-footer justify-content-center" style="border: none;">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v11.0"
         nonce="vXp6ani2"></script>
