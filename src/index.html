@@ -15,7 +15,10 @@
             /* overflow-y: hidden; */
             overflow-x: hidden;
         }
+
+
     </style>
+
 
 </head>
 
@@ -69,11 +72,13 @@
         <div class="point point-2 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint3">
 
-            </a>     </div>
+            </a>
+        </div>
         <div class="point point-3 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint1">
 
-            </a>  </div>
+            </a>
+        </div>
         <div class="point point-4 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint4">
 
@@ -82,13 +87,101 @@
         <div class="point point-5 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint5">
 
-            </a></div>
+            </a>
+        </div>
         <div class="point point-6 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint6">
 
-            </a></div>
+            </a>
+        </div>
     </section>
     <!----------------------- end model ------------------------------------>
+
+    <!----------------------- Mission Overview ------------------------------------>
+    <section id="mission" class="container-fluid" class="">
+        <div class="row">
+            <div class="col-12 col-xl-6 text-white text-center my-5 px-5">
+                <h3 class="mb-5">Mission Overview</h3>
+                <p>The James Webb Space Telescope will be the next great space science observatory, designed to answer
+                    outstanding questions about the Universe and to make breakthrough discoveries in all fields of
+                    astronomy. It is a once-in-a-generation mission.
+                </p>
+                <p>Webb is designed and built to offer scientists the capabilities needed to push the frontiers of
+                    knowledge of our own Solar System, of the formation of stars and planets including planets outside
+                    our Solar System (exoplanets), and of how galaxies are created and evolve, in ways never before
+                    possible. Webb will observe the Universe at wavelengths longer than visible light, namely in the
+                    near-infrared and mid-infrared. Its data will be made available to the scientific community
+                    worldwide.</p>
+
+                <p>Webb will observe the Universe in the near-infrared and mid infrared – that is, at wavelengths
+                    longer than visible light. It carries a suite of state-of-the-art astronomical instruments capable
+                    of addressing a very broad range of outstanding questions in astrophysics. The instrument complement
+                    includes powerful cameras, coronagraphs, and spectrographs that will provide scientists with the
+                    data they need to analyse the materials that make up stars, nebulae, galaxies and the atmospheres of
+                    planets.</p>
+
+                <p>The James Webb Space Telescope is named after NASA’s second administrator, James E. Webb, who headed
+                    the agency from February 1961 to October 1968 and directed the Apollo programme.
+                </p>
+            </div>
+
+            <div class="col-12 col-xl-6 px-5 mb-5">
+                <h3 class="text-center text-white mt-5 mb-5">Fact Sheet</h3>
+                <table class="table text-white ">
+                    <thead>
+                        <tr class="tableizer-firstrow">
+                            <th scope="col">Launch date</th>
+                            <th scope="col">18 December 2021</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mission duration</td>
+                            <td>Nominal duration is 5 years; goal is 10 years</td>
+                        </tr>
+                        <tr>
+                            <td>Launch vehicle</td>
+                            <td>Ariane 5</td>
+                        </tr>
+                        <tr>
+                            <td>Launch mass</td>
+                            <td>6200 kg, including fuel and launch vehicle adaptor</td>
+                        </tr>
+                        <tr>
+                            <td>Orbit</td>
+                            <td>Sun-Earth L2 halo orbit, approximately 1.5 million km from Earth </td>
+                        </tr>
+                        <tr>
+                            <td>Folded dimensions</td>
+                            <td>10.66 m high x 4.47 m wide 6.5 m diameter,</td>
+                        </tr>
+                        <tr>
+                            <td>Primary mirror</td>
+                            <td>8 mirror segments of gold-coated beryllium </td>
+                        </tr>
+                        <tr>
+                            <td>Sunshield</td>
+                            <td> 22 x 12 metres, 5 layers</td>
+                        </tr>
+                        <tr>
+                            <td>Wavelength range</td>
+                            <td>About 0.6 μm to 28 μm (visible to mid-infrared)</td>
+                        </tr>
+                        <tr>
+                            <td>Operating temperature</td>
+                            <td> Telescope at -233°C MIRI instrument at -266°C</td>
+                        </tr>
+                        <tr>
+                            <td>Operations centre</td>
+                            <td>Space Telescope Science Institute in Baltimore, USA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <!----------------------- end Mission Overview ------------------------------------>
 
     <!----------------------- video ------------------------------------>
     <section id="video" class="container-fluid" class="">
@@ -145,12 +238,20 @@
         </div>
 
         <div id="statistics" class="statistics  row text-center " style="visibility: hidden;">
-            <div class="col-6"><h4>Days of travel:</h4></div>
-            <div class="col-6"><h4>200</h4></div>
-            <div class="col-6"><h4>Distance traveled:</h4></div>
-            <div class="col-6"><h4>1 million kilometers</h4></div>
-            
-            
+            <div class="col-6">
+                <h4>Days of travel:</h4>
+            </div>
+            <div class="col-6">
+                <h4>200</h4>
+            </div>
+            <div class="col-6">
+                <h4>Distance traveled:</h4>
+            </div>
+            <div class="col-6">
+                <h4>1 million kilometers</h4>
+            </div>
+
+
         </div>
     </section>
     <!----------------------- end space ------------------------------------>
@@ -369,8 +470,8 @@
                 </div>
                 <div class="row modal-body ">
                     <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-                        <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/webb-far.jpg?itok=Q3pwkHnk"
-                            class="img-fluid rounded mb-3" style="width: 100%;" />
+                        <!-- <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/webb-far.jpg?itok=Q3pwkHnk"
+                            class="img-fluid rounded mb-3" style="width: 100%;" /> -->
                     </div>
                     <p class="pt-2">The telescope’s primary mirror is made of 18 hexagonal-shaped mirror segments, each
                         1.32 metres
@@ -408,6 +509,8 @@
 
                     </div>
                     <p class="pt-2">
+                        The telescope also hosts a convex secondary mirror that is roughly 0.74 metres in diameter. This
+                        is the second surface the light from the cosmos hits on its route into the telescope.
                     </p>
 
                 </div>
@@ -430,7 +533,7 @@
                 </div>
                 <div class="row modal-body ">
                     <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-   
+
                     </div>
                     <p class="pt-2">
                     </p>
@@ -444,10 +547,10 @@
         </div>
     </div>
 
-        <!-- Modal  point 3-->
-        <div class="modal fade" id="modalPoint3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!-- Modal  point 3-->
+    <div class="modal fade" id="modalPoint3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="modalPoint3Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
                 <div class="modal-header " style="border: none;">
                     <h3 class="modal-title mx-auto" id="modalPoint0Label">ISIM</h3>
@@ -455,9 +558,88 @@
                 </div>
                 <div class="row modal-body ">
                     <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
- 
+
                     </div>
+                    <h5 class="pt-5">MIRI — the Mid-InfraRed Instrument </h5>
                     <p class="pt-2">
+                        Webb has a suite of four powerful instruments that will investigate the cosmos. They are located
+                        in the Integrated Science Instrument Module, behind the primary mirror.
+
+                        MIRI is the only instrument on the telescope that is capable of operating at mid-infrared
+                        wavelengths. It will support the whole range of Webb’s science goals, from observing our own
+                        Solar System and other planetary systems, to studying the early Universe.
+
+                        MIRI is a versatile instrument offering a wide set of modes: imaging, coronagraphy and different
+                        flavours of spectroscopy. To observe the cosmos in the mid-infrared, MIRI must be kept more than
+                        30 degrees cooler than the other instruments in the Webb observatory. This is accomplished by
+                        the use of an innovative cooling system known as a cryocooler, which will act as an extra
+                        refrigerator for the MIRI instrument.
+
+                        MIRI will provide imaging, coronagraphy and spectroscopy over the 5 µm ̶ 28 µm wavelength range.
+                        It will operate at –266°C (compared with –233°C for the rest of the observatory). This is barely
+                        seven degrees above absolute zero, the lowest temperature possible according to the laws of
+                        physics.
+
+                    </p>
+                    <h5 class="pt-5">NIRSpec — the Near-InfraRed Spectrograph</h5>
+                    <p class="pt-2">
+                        Webb has a suite of four powerful instruments that will investigate the cosmos. They are located
+                        in the Integrated Science Instrument Module, behind the primary mirror.
+
+                        A spectrograph is used to disperse light from an object into its different wavelengths, forming
+                        a spectrum, similarly to how a rainbow is formed when light passes through a prism. Any object
+                        that absorbs or emits light can be studied with a spectrograph to determine characteristics such
+                        as its temperature, density, chemical composition, and velocity. Webb’s images will tell us what
+                        something looks like, while the spectrograph data tell us what it is and what it’s made of.
+
+                        The NIRSpec instrument is the workhorse near-infrared spectrograph on board Webb, and is
+                        provided entirely by ESA. The primary goal of NIRSpec is to enable large spectroscopic surveys
+                        of astronomical objects such as stars or distant galaxies. This is made possible by its powerful
+                        multi-object spectroscopy mode, which makes use of microshutters. This mode is capable of
+                        obtaining spectra of up to nearly 200 objects simultaneously, over a 3.6×3.4 arcminute field of
+                        view – the first time this capability has been provided from space. This mode makes for very
+                        efficient use of Webb’s valuable observing time.
+
+                        An arcminute is a unit of angular measurement equal to one sixtieth of one degree and is used in
+                        astronomy to communicate small angles. For example, the angular diameter of the Moon is around
+                        30 arcminutes.
+
+                        NIRSpec also offers integral-field and fixed-slit spectroscopy viewing modes that will allow
+                        detailed studies of individual astronomical objects.
+
+                        [NIRSpec Light path graphic - to be added later once we have it]
+                        Caption: This figure shows the path followed by light from an astronomical object as it travels
+                        through the NIRSpec components and onto the detector. Six filter and grating combinations
+                        provide high-resolution and medium-resolution spectroscopy over the wavelength range 0.7 µm –
+                        5.2 µm. The prism yields lower-resolution spectroscopy over the range 0.6 µm – 5.3 µm
+
+                    </p>
+                    <h5 class="pt-5">NIRCam — the Near-InfraRed Camera</h5>
+                    <p class="pt-2">
+                        Webb’s NIRCam is the observatory’s primary camera, and will simultaneously image the cosmos in
+                        two different infrared ranges. Taking advantage of Webb’s exquisite image quality and large
+                        primary mirror, the instrument will acquire some of the deepest (i.e. farthest away)
+                        near-infrared images ever obtained, detecting light from the first stars and galaxies. NIRCam
+                        also has coronagraphic and spectroscopic capabilities, which will, for example, be used to
+                        characterise exoplanets. NIRCam will also be the primary tool for alignment of the telescope. It
+                        was provided by the University of Arizona.
+                    </p>
+                    <h5 class="pt-5">NIRISS — the Near-InfraRed Imager and Slitless Spectrograph</h5>
+                    <p class="pt-2">
+                        NIRISS is an innovative instrument that will support operations in three observing modes. It has
+                        a camera that will be usable in parallel with the NIRCam camera to provide additional imaging
+                        capabilities for Webb. It features a slitless spectrograph, where all the light falling on the
+                        camera will be dispersed into its spectrum. Unlike in an ordinary spectrograph, the light source
+                        in a slitless spectrograph is not a narrow slit. NIRISS also offers a spectroscopic mode that is
+                        specially designed for exoplanet characterisation using transit spectroscopy, a technique that
+                        allows Webb to study the chemical composition of an exoplanet’s atmosphere when it passes in
+                        front of its host star. The instrument’s accompanying fine guidance sensor will allow Webb to
+                        remain steadily locked on or pointed, with very high precision, at a specific celestial target –
+                        even a moving one. This high precision means that it can obtain high-resolution images and
+                        spectra. With NIRISS, astronomers will study whether or not the spectra of distant planets show
+                        lines characteristic of molecules such as water, carbon dioxide, methane and oxygen in their
+                        atmospheres – key to the search for life-friendly conditions. NIRISS was provided by the
+                        Canadian Space Agency
                     </p>
 
                 </div>
@@ -469,8 +651,8 @@
         </div>
     </div>
 
-        <!-- Modal  point 4-->
-        <div class="modal fade" id="modalPoint4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!-- Modal  point 4-->
+    <div class="modal fade" id="modalPoint4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="modalPoint4Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
@@ -480,7 +662,37 @@
                 </div>
                 <div class="row modal-body ">
                     <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-              
+
+                    </div>
+                    <p class="pt-2">
+                        A giant, five-layered sunshield protects the James Webb Space Telescope and its instruments from
+                        the light and heat of the Sun. At 22×12 metres, this is about the size of a tennis court. The
+                        sunshield keeps the telescope in perpetual shadow for operations at –233°C, to prevent the
+                        instruments’ own infrared emission from overwhelming the signals from the astronomical targets.
+                        The mid infrared instrument MIRI is further cooled to –266°C.
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  point 5-->
+    <div class="modal fade" id="modalPoint5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Spacecraft Bus</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+
                     </div>
                     <p class="pt-2">
 
@@ -495,57 +707,31 @@
         </div>
     </div>
 
-            <!-- Modal  point 5-->
-            <div class="modal fade" id="modalPoint5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modalPoint5Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered ">
-                <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
-                    <div class="modal-header " style="border: none;">
-                        <h3 class="modal-title mx-auto" id="modalPoint0Label">Spacecraft Bus</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal  point 6-->
+    <div class="modal fade" id="modalPoint6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPoint6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
+                <div class="modal-header " style="border: none;">
+                    <h3 class="modal-title mx-auto" id="modalPoint0Label">Startrackers</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row modal-body ">
+                    <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+
                     </div>
-                    <div class="row modal-body ">
-                        <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-                  
-                        </div>
-                        <p class="pt-2">
-    
-                        </p>
-    
-                    </div>
-                    <div class="modal-footer justify-content-center" style="border: none;">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-    
-                    </div>
+                    <p class="pt-2">
+
+                    </p>
+
+                </div>
+                <div class="modal-footer justify-content-center" style="border: none;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
                 </div>
             </div>
         </div>
-
-                <!-- Modal  point 6-->
-                <div class="modal fade" id="modalPoint6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="modalPoint6Label" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered ">
-                    <div class="modal-content text-white  p-3 border border-light" style="background-color:  rgb(0, 50, 71);">
-                        <div class="modal-header " style="border: none;">
-                            <h3 class="modal-title mx-auto" id="modalPoint0Label">Startrackers</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="row modal-body ">
-                            <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-                      
-                            </div>
-                            <p class="pt-2">
-        
-                            </p>
-        
-                        </div>
-                        <div class="modal-footer justify-content-center" style="border: none;">
-                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
 
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v11.0"
         nonce="vXp6ani2"></script>
