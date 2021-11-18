@@ -10,13 +10,13 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
+
     <style>
         body {
             /* overflow-y: hidden; */
             overflow-x: hidden;
         }
-
-
     </style>
 
 
@@ -55,7 +55,7 @@
                 <ion-icon name="remove" size="large"></ion-icon>
             </a> -->
             <a id="rotationModel" type="button" onclick="" class="stop mx-auto text-white" style="display: none;">
-                <ion-icon name="pause" size="large"></ion-icon>
+                <ion-icon id="zoom" name="pause" size="large"></ion-icon>
             </a>
         </div>
         <div class="point point-0 visible" style="display: none;">
@@ -100,7 +100,7 @@
     <!----------------------- Mission Overview ------------------------------------>
     <section id="mission" class="container-fluid" class="">
         <div class="row">
-            <div class="col-12 col-xl-6 text-white text-center my-5 px-5">
+            <div id="Overview" class="col-12 col-xl-6 text-white text-center my-5 px-5">
                 <h3 class="mb-5">Mission Overview</h3>
                 <p>The James Webb Space Telescope will be the next great space science observatory, designed to answer
                     outstanding questions about the Universe and to make breakthrough discoveries in all fields of
@@ -125,7 +125,7 @@
                 </p>
             </div>
 
-            <div class="col-12 col-xl-6 px-5 mb-5">
+            <div id="Factsheet" class="col-12 col-xl-6 px-5 mb-5">
                 <h3 class="text-center text-white mt-5 mb-5">Fact Sheet</h3>
                 <table class="table text-white ">
                     <thead>
@@ -186,6 +186,7 @@
     <!----------------------- video ------------------------------------>
     <section id="video" class="container-fluid" class="">
         <video src="deployment.mp4" class="ps-3 pe-4 pt-3 pb-5" controls autoplay muted></video>
+        <span id="video-help">.</span>
     </section>
     <!----------------------- end video ------------------------------------>
 
@@ -195,7 +196,7 @@
 
         </canvas>
         <div class="timeline">
-            <h4>Where is the JWST?</h4>
+            <h4>Where is the Webb?</h4>
         </div>
         <!-- <div class="timeline2">
             <h5>L2</h5>
@@ -208,7 +209,7 @@
         </div> -->
         <div id="timeNone" class="distance">
             <a id="distance" type="button" onclick="">
-                <ion-icon name="play" size="large"></ion-icon>
+                <ion-icon id="distance-help" name="play" size="large"></ion-icon>
             </a>
         </div>
 
@@ -282,7 +283,7 @@
             <h4 class="col-12 my-5 text-white text-center"><strong>What's New</strong></h4>
 
             <div class="col-12  col-xl-4 mb-4">
-                <div class="card mx-auto">
+                <div id="new" class="card mx-auto">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/stsci-j-p2152b-f-1807x2256.jpg?itok=vnKW18Y3"
                             class="img-fluid rounded" />
@@ -367,8 +368,8 @@
                         href="https://www.facebook.com/hubbleESA/">Hubble Space Telescope</a></blockquote>
             </div>
             <div class="col-xl-2"></div>
-            <div class="fb-page col-12 col-xl-5 text-center my-3">
-                <a class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
+            <div  class="fb-page col-12 col-xl-5 text-center my-3">
+                <a  class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
                     data-height="600">Tweets by
                     NASAWebb</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -392,15 +393,16 @@
 
                 </div>
                 <!-- <div class="col-2 text-white d-none d-xl-block"> -->
+
                 <div class="col-2 text-white text-center">
                     <a id="home" href="#scene 1 model" onclick="startSection()" class="text-white mx-xl-3">
-                        <ion-icon name="home" size="large"></ion-icon>
+                        <ion-icon id="home-icon" name="home" size="large"></ion-icon>
                     </a>
                     <a id="arrow-top" href="#blog" onclick="decreaseSection()" class="text-white">
-                        <ion-icon name="arrow-dropup-circle" size="large"></ion-icon>
+                        <ion-icon id="arrow-top-icon" name="arrow-dropup-circle" size="large"></ion-icon>
                     </a>
                     <a id="arrow-down" href="#video" onclick="increaseSection()" class="text-white mx-xl-3">
-                        <ion-icon name="arrow-dropdown-circle" size="large"></ion-icon>
+                        <ion-icon id="arrow-down-icon" name="arrow-dropdown-circle" size="large"></ion-icon>
                     </a>
                 </div>
 
@@ -411,11 +413,14 @@
                     </audio>
 
                     <a type="button" class="text-white mx-xl-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <ion-icon name="help-circle-outline" size="large"></ion-icon>
+                        <ion-icon id="help-icon" name="help-circle-outline" size="large"></ion-icon>
                     </a>
 
                     <a id="playPauseBTN" type="button" onclick="playPause()" class="text-white mx-xl-1">
-                        <ion-icon name="volume-off" size="large"></ion-icon>
+                        <ion-icon id="mute-icon" name="volume-off" size="large"></ion-icon>
+                    </a>
+                    <a id="" href="mailto:info@esahubble.org" type="button" onclick="" class="text-white mx-xl-1">
+                        <ion-icon id="mail" name="mail" size="large"></ion-icon>
                     </a>
                     <!-- Button trigger modal -->
 
@@ -746,11 +751,13 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
 
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
     <script type="text/javascript">
         var n = 0;
         var arrowtop = document.getElementById('arrow-top');
         var arrowdown = document.getElementById('arrow-down');
-        let sectionpage = ["scene 1 model", "video", "scene 3 timeline", "scene 2 space", "blog", "social media"];
+        let sectionpage = ["scene 1 model", "mission" ,"video", "scene 3 timeline", "scene 2 space", "blog", "social media"];
 
         $(document).ready(function () {
             setTimeout(function () {
@@ -824,6 +831,31 @@
             audio.currentTime = 0;
             playPauseBTN.innerHTML = "Play &#9658"
         }
+
+        introJs().setOptions({
+            steps: [{
+                intro: "Welcome to the James Webb Space Telescope site!"
+            }, {
+                element: document.querySelector('#zoom'),
+                intro: "If you want to know more about the telescope, pause the model and click on the dots."
+            },{
+                element: document.querySelector('#distance-help'),
+                intro: "Click 'Play' to see where's Webb right now!"
+            },{
+                element: document.querySelector('#help-icon'),
+                intro: "Click here for help."
+            },{
+                element: document.querySelector('#mute-icon'),
+                intro: "Turn on/off the music."
+            },
+            // {
+            //     element: document.querySelector('#'),
+            //     intro: "Click here if you want to get in touch."
+            // },
+            {
+                intro: "Now we're ready to explore. Enjoy!"
+            }]
+        }).start();
 
     </script>
 </body>
