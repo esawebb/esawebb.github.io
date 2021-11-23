@@ -63,12 +63,12 @@
 
             </a>
         </div>
-
+<!-- 
         <div class="point point-1 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint2">
 
             </a>
-        </div>
+        </div> -->
         <div class="point point-2 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint3">
 
@@ -84,7 +84,7 @@
 
             </a>
         </div>
-        <div class="point point-5 visible" style="display: none;">
+        <!-- <div class="point point-5 visible" style="display: none;">
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint5">
 
             </a>
@@ -93,15 +93,15 @@
             <a type="button" class="label" data-bs-toggle="modal" data-bs-target="#modalPoint6">
 
             </a>
-        </div>
+        </div> -->
     </section>
     <!----------------------- end model ------------------------------------>
 
     <!----------------------- Mission Overview ------------------------------------>
     <section id="mission" class="container-fluid" class="">
         <div class="row">
-            <div id="Overview" class="col-12 col-xl-6 text-white text-center my-5 px-5">
-                <h3 class="mb-5">Mission Overview</h3>
+            <div id="Overview" class="col-12 col-xl-6 text-white  my-5 px-5">
+                <h3 class="text-center mb-5">Mission Overview</h3>
                 <p>The James Webb Space Telescope will be the next great space science observatory, designed to answer
                     outstanding questions about the Universe and to make breakthrough discoveries in all fields of
                     astronomy. It is a once-in-a-generation mission.
@@ -186,7 +186,7 @@
     <!----------------------- video ------------------------------------>
     <section id="video" class="container-fluid" class="">
         <video src="deployment.mp4" class="ps-3 pe-4 pt-3 pb-5" controls autoplay muted></video>
-        <span id="video-help">.</span>
+        
     </section>
     <!----------------------- end video ------------------------------------>
 
@@ -291,10 +291,10 @@
                             <div class="mask" style="background-color: rgba(249, 49, 84, 0.6);"></div>
                         </a>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body ">
                         <h5 class="card-title ">Webb to Explore Forming Planetary Systems</h5>
                         <br>
-                        <p class="card-text">
+                        <p class="card-text text-start">
                             Planetary systems take millions of years to form, which introduces quite a challenge for
                             astronomers. How do you identify which stage they are in, or categorize them?
                         </p>
@@ -314,10 +314,10 @@
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body ">
                         <h5 class="card-title">Webb Telescope Prelaunch Events in French Guiana</h5>
                         <br>
-                        <p class="card-text">
+                        <p class="card-text text-start">
                             NASA invites members of the media to register their interest in attending events in French
                             Guiana ahead of the launch of the James Webb Space Telescope, a mission led by NASA in
                             partnership with the European and Canadian space agencies.
@@ -336,10 +336,10 @@
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body">
                         <h5 class="card-title ">James Webb Space Telescope Testing Progress Continues</h5>
                         <br>
-                        <p class="card-text">
+                        <p class="card-text text-start">
                             Engineers have made considerable progress in checking off NASA’s James Webb Space
                             Telescope’s final series of tests. Three big milestones have recently been completed.
                         </p>
@@ -368,8 +368,8 @@
                         href="https://www.facebook.com/hubbleESA/">Hubble Space Telescope</a></blockquote>
             </div>
             <div class="col-xl-2"></div>
-            <div  class="fb-page col-12 col-xl-5 text-center my-3">
-                <a  class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
+            <div class="fb-page col-12 col-xl-5 text-center my-3">
+                <a class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
                     data-height="600">Tweets by
                     NASAWebb</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -419,7 +419,7 @@
                     <a id="playPauseBTN" type="button" onclick="playPause()" class="text-white mx-xl-1">
                         <ion-icon id="mute-icon" name="volume-off" size="large"></ion-icon>
                     </a>
-                    <a id="" href="mailto:info@esahubble.org" type="button" onclick="" class="text-white mx-xl-1">
+                    <a id="mailto" href="mailto:info@esahubble.org" type="button" onclick="" class="text-white mx-xl-1">
                         <ion-icon id="mail" name="mail" size="large"></ion-icon>
                     </a>
                     <!-- Button trigger modal -->
@@ -757,7 +757,7 @@
         var n = 0;
         var arrowtop = document.getElementById('arrow-top');
         var arrowdown = document.getElementById('arrow-down');
-        let sectionpage = ["scene 1 model", "mission" ,"video", "scene 3 timeline", "scene 2 space", "blog", "social media"];
+        let sectionpage = ["scene 1 model", "mission", "video", "scene 3 timeline", "scene 2 space", "blog", "social media"];
 
         $(document).ready(function () {
             setTimeout(function () {
@@ -782,6 +782,33 @@
 
             setTimeout(function () {
                 $("#rotationModel").css("display", "block");
+            }, 5000);
+
+            setTimeout(function () {
+                introJs().setOptions({
+                    steps: [{
+                        intro: "Welcome to the James Webb Space Telescope site!"
+                    }, {
+                        element: document.querySelector('#zoom'),
+                        intro: "If you want to know more about the telescope, pause the model and click on the dots."
+                    }, {
+                        element: document.querySelector('#distance-help'),
+                        intro: "Click 'Play' to see where's Webb right now!"
+                    }, {
+                        element: document.querySelector('#help-icon'),
+                        intro: "Click here for help."
+                    }, {
+                        element: document.querySelector('#mute-icon'),
+                        intro: "Turn on/off the music."
+                    },
+                    {
+                        element: document.querySelector('#mailto'),
+                        intro: "Click here if you want to get in touch."
+                    },
+                    {
+                        intro: "Now we're ready to explore. Enjoy!"
+                    }]
+                }).start();
             }, 5000);
         });
 
@@ -832,30 +859,30 @@
             playPauseBTN.innerHTML = "Play &#9658"
         }
 
-        introJs().setOptions({
-            steps: [{
-                intro: "Welcome to the James Webb Space Telescope site!"
-            }, {
-                element: document.querySelector('#zoom'),
-                intro: "If you want to know more about the telescope, pause the model and click on the dots."
-            },{
-                element: document.querySelector('#distance-help'),
-                intro: "Click 'Play' to see where's Webb right now!"
-            },{
-                element: document.querySelector('#help-icon'),
-                intro: "Click here for help."
-            },{
-                element: document.querySelector('#mute-icon'),
-                intro: "Turn on/off the music."
-            },
-            // {
-            //     element: document.querySelector('#'),
-            //     intro: "Click here if you want to get in touch."
-            // },
-            {
-                intro: "Now we're ready to explore. Enjoy!"
-            }]
-        }).start();
+        // introJs().setOptions({
+        //     steps: [{
+        //         intro: "Welcome to the James Webb Space Telescope site!"
+        //     }, {
+        //         element: document.querySelector('#zoom'),
+        //         intro: "If you want to know more about the telescope, pause the model and click on the dots."
+        //     },{
+        //         element: document.querySelector('#distance-help'),
+        //         intro: "Click 'Play' to see where's Webb right now!"
+        //     },{
+        //         element: document.querySelector('#help-icon'),
+        //         intro: "Click here for help."
+        //     },{
+        //         element: document.querySelector('#mute-icon'),
+        //         intro: "Turn on/off the music."
+        //     },
+        //     // {
+        //     //     element: document.querySelector('#'),
+        //     //     intro: "Click here if you want to get in touch."
+        //     // },
+        //     {
+        //         intro: "Now we're ready to explore. Enjoy!"
+        //     }]
+        // }).start();
 
     </script>
 </body>

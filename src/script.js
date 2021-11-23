@@ -270,10 +270,10 @@ const pointsModel = [
         position: new THREE.Vector3(-0.4, 1, 0.5),
         element: document.querySelector('.point-0')
     },
-    {
-        position: new THREE.Vector3(-0.3, 1.6, - 0.6),
-        element: document.querySelector('.point-1')
-    },
+    // {
+    //     position: new THREE.Vector3(-0.3, 1.6, - 0.6),
+    //     element: document.querySelector('.point-1')
+    // },
     {
         position: new THREE.Vector3(0.5, 1.2, - 0.4),
         element: document.querySelector('.point-2')
@@ -285,15 +285,16 @@ const pointsModel = [
     {
         position: new THREE.Vector3(2, 0.4, -0.3),
         element: document.querySelector('.point-4')
-    },
-    {
-        position: new THREE.Vector3(0.2, -0.9, -0.4),
-        element: document.querySelector('.point-5')
-    },
-    {
-        position: new THREE.Vector3(-0.4, -0.9, 0.3),
-        element: document.querySelector('.point-6')
     }
+    // ,
+    // {
+    //     position: new THREE.Vector3(0.2, -0.9, -0.4),
+    //     element: document.querySelector('.point-5')
+    // },
+    // {
+    //     position: new THREE.Vector3(-0.4, -0.9, 0.3),
+    //     element: document.querySelector('.point-6')
+    // }
 
 ]
 
