@@ -140,29 +140,20 @@ scene.add(floor)
 /**
  * Loaders
  */
-const loadingBarElement = document.querySelector('.loading-bar')
+
 const loadingManager = new THREE.LoadingManager(
     // Loaded
-    () =>
-    {
-        // Wait a little
-        window.setTimeout(() =>
-        {
-            // Animate overlay
-            gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
+    () => {
+        // Animate overlay
+        gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0})
 
-            // Update loadingBarElement
-            loadingBarElement.classList.add('ended')
-            loadingBarElement.style.transform = ''
-        }, 500)
     },
 
     // Progress
-    (itemUrl, itemsLoaded, itemsTotal) =>
-    {
+    (itemUrl, itemsLoaded, itemsTotal) => {
         // Calculate the progress and update the loadingBarElement
         const progressRatio = itemsLoaded / itemsTotal
-        loadingBarElement.style.transform = `scaleX(${progressRatio})`
+
     }
 )
 
@@ -202,7 +193,7 @@ directionalLight2.shadow.camera.left = - 7
 directionalLight2.shadow.camera.top = 7
 directionalLight2.shadow.camera.right = 7
 directionalLight2.shadow.camera.bottom = - 7
-directionalLight2.position.set( 2, 2, 0)
+directionalLight2.position.set(2, 2, 0)
 scene.add(directionalLight2)
 
 const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.5)
@@ -213,7 +204,7 @@ directionalLight3.shadow.camera.left = - 7
 directionalLight3.shadow.camera.top = 7
 directionalLight3.shadow.camera.right = 7
 directionalLight3.shadow.camera.bottom = - 7
-directionalLight3.position.set( 0, -1, 0)
+directionalLight3.position.set(0, -1, 0)
 scene.add(directionalLight3)
 
 const directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.5)
@@ -235,7 +226,7 @@ directionalLight5.shadow.camera.left = - 7
 directionalLight5.shadow.camera.top = 7
 directionalLight5.shadow.camera.right = 7
 directionalLight5.shadow.camera.bottom = - 7
-directionalLight5.position.set( 2, 2, 2)
+directionalLight5.position.set(2, 2, 2)
 scene.add(directionalLight5)
 
 const overlayGeometry = new THREE.PlaneGeometry(2, 2, 1, 1)
@@ -356,17 +347,17 @@ sphereSun.position.x = -10
 
 ////////////////////// circle
 const curve = new THREE.EllipseCurve(
-	0,  0,            // ax, aY
-	2, 2,           // xRadius, yRadius
-	0,  2 * Math.PI,  // aStartAngle, aEndAngle
-	false,            // aClockwise
-	0               // aRotation
+    0, 0,            // ax, aY
+    2, 2,           // xRadius, yRadius
+    0, 2 * Math.PI,  // aStartAngle, aEndAngle
+    false,            // aClockwise
+    0               // aRotation
 );
-const pointsCurve = curve.getPoints( 50 );
-const geometryCurve = new THREE.BufferGeometry().setFromPoints( pointsCurve );
-const materialCurve = new THREE.LineBasicMaterial( { color : 0xffffff } );
+const pointsCurve = curve.getPoints(50);
+const geometryCurve = new THREE.BufferGeometry().setFromPoints(pointsCurve);
+const materialCurve = new THREE.LineBasicMaterial({ color: 0xffffff });
 // Create the final object to add to the scene
-const ellipse = new THREE.Line( geometryCurve, materialCurve );
+const ellipse = new THREE.Line(geometryCurve, materialCurve);
 ellipse.position.x = 10;
 ellipse.rotation.y = 1.5;
 scene2.add(ellipse)
@@ -461,21 +452,21 @@ controls2.update();
 // scene3.add(circle2);
 
 ////////////////////// circle L2 start
-const geometryL2 = new THREE.SphereGeometry( 0.05, 32, 16 );
+const geometryL2 = new THREE.SphereGeometry(0.05, 32, 16);
 const materialL2 = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const circleL2 = new THREE.Mesh(geometryL2, materialL2);
 circleL2.position.z = 20
 scene3.add(circleL2);
 
 ////////////////////// circle L2 end
-const geometryEnd = new THREE.SphereGeometry( 0.05, 32, 16 );
+const geometryEnd = new THREE.SphereGeometry(0.05, 32, 16);
 const materialEnd = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const circleEnd = new THREE.Mesh(geometryEnd, materialEnd);
 circleEnd.position.z = -4.5
 scene3.add(circleEnd);
 
 // ////////////////////// circle Po start
-const geometryPo = new THREE.SphereGeometry( 0.05, 32, 16 );
+const geometryPo = new THREE.SphereGeometry(0.05, 32, 16);
 const materialPo = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const circlePo = new THREE.Mesh(geometryPo, materialPo);
 circlePo.position.z = 20
@@ -511,7 +502,7 @@ loader.load(model2, function (gltf) {
     obj3.scale.set(0.001, 0.001, 0.001)
     scene3.add(obj3);
 });
-var light3 = new THREE.AmbientLight( 0xffffff );
+var light3 = new THREE.AmbientLight(0xffffff);
 scene3.add(light3);
 
 // ////////////////////// Hubble
@@ -645,7 +636,7 @@ document.getElementById("timeOut").addEventListener("click", () => {
 
     var playTimeOut = document.getElementById('timeOut');
 
-    if (timeOut == true){
+    if (timeOut == true) {
         timeOut = false;
         playTimeOut.innerHTML = `<ion-icon name="play" size="large"></ion-icon>`;
 
@@ -655,7 +646,7 @@ document.getElementById("timeOut").addEventListener("click", () => {
 
     }
 
-    
+
 })
 
 var distance = false;
@@ -664,7 +655,7 @@ document.getElementById("distance").addEventListener("click", () => {
 
     var playTimeOut = document.getElementById('distance');
 
-    if (distance == true){
+    if (distance == true) {
         distance = false;
         playTimeOut.innerHTML = `<ion-icon name="play" size="large"></ion-icon>`;
 
@@ -673,15 +664,14 @@ document.getElementById("distance").addEventListener("click", () => {
         camera.position.z = 8;
         distance = true;
         document.getElementById('timeNone').classList.add('d-none');
-        document.getElementById('statistics').style.visibility= 'visible';
+        document.getElementById('statistics').style.visibility = 'visible';
     }
 
-    
+
 })
 
 var rotationModel = true;
-for(const pointModel of pointsModel)
-{
+for (const pointModel of pointsModel) {
     pointModel.element.classList.remove('visible')
 }
 
@@ -689,11 +679,10 @@ document.getElementById("rotationModel").addEventListener("click", () => {
 
     var playRotationModel = document.getElementById('rotationModel');
 
-    if (rotationModel == true){
+    if (rotationModel == true) {
         rotationModel = false;
         playRotationModel.innerHTML = `<ion-icon name="play" size="large"></ion-icon>`;
-        for(const pointModel of pointsModel)
-        {
+        for (const pointModel of pointsModel) {
             pointModel.element.classList.add('visible')
         }
         obj.rotation.y = 3.0;
@@ -702,14 +691,13 @@ document.getElementById("rotationModel").addEventListener("click", () => {
         rotationModel = true;
         playRotationModel.innerHTML = `<ion-icon name="pause" size="large"></ion-icon>`;
         pointsModel.enabled = false;
-        for(const pointModel of pointsModel)
-        {
+        for (const pointModel of pointsModel) {
             pointModel.element.classList.remove('visible')
         }
-        
+
     }
 
-    
+
 })
 
 function animate() {
@@ -732,29 +720,29 @@ function animate() {
     //sphere2.rotation.y += 0.003;
     circlePlanet.rotation.y += 0.001;
 
-     if (circlePo.position.z > -1 && distance == true) {
+    if (circlePo.position.z > -1 && distance == true) {
         circlePo.position.z -= 0.02;
         obj3.position.z -= 0.02;
-        
+
     }
-    
+
 
     obj2.position.y = Math.cos(elapsedTime / 2) * 2;
     obj2.position.z = Math.sin(elapsedTime / 2) * 2;
 
     if (camera.position.x < 5 && distance == true) {
         camera.position.x += 0.05;
-        camera.position.z -= 0.14; 
+        camera.position.z -= 0.14;
     }
 
     if (camera.position.x > 3 && distance == false) {
         camera.position.x -= 0.05;
-        camera.position.z += 0.14; 
+        camera.position.z += 0.14;
     }
 
 
 
-   
+
 
     // if (camera2.position.x < 20 && timeOut == true) {
     //     camera2.position.x += 0.1;
@@ -775,28 +763,26 @@ function animate() {
 
     controls.update()
 
-    
 
-    for(const pointModel of pointsModel)
-    {
+
+    for (const pointModel of pointsModel) {
         const screenPosition = pointModel.position.clone()
         screenPosition.project(camera1)
 
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.height * 0.5
         pointModel.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`
-        
+
     }
 
-    for(const pointLine of pointsLine)
-    {
+    for (const pointLine of pointsLine) {
         const screenPositionLine = pointLine.position.clone()
         screenPositionLine.project(camera)
 
         const translateLineX = screenPositionLine.x * sizes.width * 0.5
         const translateLineY = - screenPositionLine.y * sizes.height * 0.5
         pointLine.element.style.transform = `translateX(${translateLineX}px) translateY(${translateLineY}px)`
-        
+
     }
     // if (cursor.y>0.05){
     //     obj.rotation.x += 0.001;
