@@ -141,27 +141,27 @@ scene.add(floor)
  * Loaders
  */
 
-const loadingManager = new THREE.LoadingManager(
-    // Loaded
-    () => {
-        // Animate overlay
-        gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0})
+// const loadingManager = new THREE.LoadingManager(
+//     // Loaded
+//     () => {
+//         // Animate overlay
+//         gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0})
 
-    },
+//     },
 
-    // Progress
-    (itemUrl, itemsLoaded, itemsTotal) => {
-        // Calculate the progress and update the loadingBarElement
-        const progressRatio = itemsLoaded / itemsTotal
+//     // Progress
+//     (itemUrl, itemsLoaded, itemsTotal) => {
+//         // Calculate the progress and update the loadingBarElement
+//         const progressRatio = itemsLoaded / itemsTotal
 
-    }
-)
+//     }
+// )
 
-const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
+// const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
 
 // model
 
-var loader = new GLTFLoader(loadingManager);
+var loader = new GLTFLoader();
 var obj;
 var obj2;
 loader.load(model, function (gltf) {
@@ -229,31 +229,31 @@ directionalLight5.shadow.camera.bottom = - 7
 directionalLight5.position.set(2, 2, 2)
 scene.add(directionalLight5)
 
-const overlayGeometry = new THREE.PlaneGeometry(2, 2, 1, 1)
-const overlayMaterial = new THREE.ShaderMaterial({
-    // wireframe: true,
-    transparent: true,
-    uniforms:
-    {
-        uAlpha: { value: 1 }
-    },
-    vertexShader: `
-        void main()
-        {
-            gl_Position = vec4(position, 1.0);
-        }
-    `,
-    fragmentShader: `
-        uniform float uAlpha;
+// const overlayGeometry = new THREE.PlaneGeometry(2, 2, 1, 1)
+// const overlayMaterial = new THREE.ShaderMaterial({
+//     // wireframe: true,
+//     transparent: true,
+//     uniforms:
+//     {
+//         uAlpha: { value: 1 }
+//     },
+//     vertexShader: `
+//         void main()
+//         {
+//             gl_Position = vec4(position, 1.0);
+//         }
+//     `,
+//     fragmentShader: `
+//         uniform float uAlpha;
 
-        void main()
-        {
-            gl_FragColor = vec4(0.0, 0.0, 0.0, uAlpha);
-        }
-    `
-})
-const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
-scene.add(overlay)
+//         void main()
+//         {
+//             gl_FragColor = vec4(0.0, 0.0, 0.0, uAlpha);
+//         }
+//     `
+// })
+// const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
+// scene.add(overlay)
 
 const pointsModel = [
     {
