@@ -337,6 +337,26 @@ body {
     transition: transform 0.3s;
 }
 
+.pointLine .L2
+{
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 30px;
+    cursor: help;
+
+
+}
+
 .pointLine .text
 {
     position: absolute;
@@ -366,3 +386,4 @@ body {
 {
     transform: scale(1, 1);
 }
+

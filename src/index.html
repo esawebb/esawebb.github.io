@@ -95,6 +95,7 @@
 
             </a>
         </div> -->
+
     </section>
     <!----------------------- end model ------------------------------------>
 
@@ -238,6 +239,9 @@
             <div class="label"></div>
             <div class="text">Primary Mirror Deployment</div>
         </div>
+        <div id="pointL2" class="pointLine pointLine-L2" style="visibility: hidden;">
+            <div class="L2">L2</div>
+        </div>
 
         <div id="statistics" class="statistics  row text-center " style="visibility: hidden;">
             <div class="col-6">
@@ -368,13 +372,16 @@
                 <blockquote cite="https://www.facebook.com/hubbleESA/" class="fb-xfbml-parse-ignore"><a
                         href="https://www.facebook.com/hubbleESA/">Hubble Space Telescope</a></blockquote>
             </div> -->
-            <iframe class="fb-page col-12 col-xl-6 text-center my-3 mx-auto"
+            <div class="embed-responsive embed-responsive-16by9 fb-page col-12 col-xl-6 text-center my-3 mx-auto">
+                <iframe 
                 src="https://www.facebook.com/plugins/page.php?locale=en_US&href=https%3A%2F%2Fwww.facebook.com%2FhubbleESA%2F&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                 width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+           
 
-            <div class="fb-page col-12 col-xl-6 text-center my-3">
+            <div class="embed-responsive embed-responsive-16by9 fb-page col-12 col-xl-6 text-center my-3">
                 <a class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
                     data-height="600">Tweets by
                     NASAWebb</a>
@@ -389,19 +396,19 @@
         <div class="container-fluid mt-2">
             <div class="row my-2 mx-3">
 
-                <div class="col-4 col-xl-4 text-center text-white">
+                <div class="col-4 col-xl-4 text-center text-white d-none d-md-block">
                     <div id="" class="mt-2">
                         <p class="d-inline">James Webb Space Telescope</p>
                     </div>
                 </div>
 
-                <div class="col-4 col-xl-4 text-center text-white">
+                <div class="col-6 col-md-4 col-xl-4 text-center text-white">
                     <div id="clock" class="mt-2"></div>
 
                 </div>
                 <!-- <div class="col-2 text-white d-none d-xl-block"> -->
 
-                <div class="col-2 text-white text-center">
+                <div class="col-3 col-md-2 text-white text-center">
                     <a id="home" href="#scene 1 model" onclick="startSection()" class="text-white mx-xl-3">
                         <ion-icon id="home-icon" name="home" size="large"></ion-icon>
                     </a>
@@ -414,7 +421,7 @@
                 </div>
 
 
-                <div class="col-2  text-white">
+                <div class="col-3 col-md-2  text-white">
                     <audio id="audio" loop>
                         <source src="media/audio.ogg" type="audio/ogg">
                     </audio>

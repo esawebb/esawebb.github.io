@@ -567,6 +567,10 @@ const pointsLine = [
         position: new THREE.Vector3(0, 0, -3),
         element: document.querySelector('.pointLine-4')
     },
+    {
+        position: new THREE.Vector3(0, 0.3, -4.6),
+        element: document.querySelector('.pointLine-L2')
+    }
 
 ]
 // ////////////////// line Moon
@@ -631,14 +635,20 @@ const clock = new THREE.Clock()
 // })
 
 var timeOut = false;
+for (const pointLine of pointsLine) {
+    pointLine.element.classList.remove('visible')
+}
+
 
 document.getElementById("timeOut").addEventListener("click", () => {
+
 
     var playTimeOut = document.getElementById('timeOut');
 
     if (timeOut == true) {
         timeOut = false;
         playTimeOut.innerHTML = `<ion-icon name="play" size="large"></ion-icon>`;
+
 
     } else {
         timeOut = true;
@@ -665,6 +675,10 @@ document.getElementById("distance").addEventListener("click", () => {
         distance = true;
         document.getElementById('timeNone').classList.add('d-none');
         document.getElementById('statistics').style.visibility = 'visible';
+        document.getElementById('pointL2').style.visibility = 'visible';
+        for (const pointLine of pointsLine) {
+            pointLine.element.classList.add('visible')
+        }
     }
 
 
