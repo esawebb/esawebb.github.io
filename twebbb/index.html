@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/style.css" rel="stylesheet">
+    <style>
+        body {
+            /* overflow-y: hidden; */
+            overflow-x: hidden;
+
+        }
+        #gallery img:hover {
+            border: 5px solid #f7f7f7;
+        }
+        #navbar li:hover{
+            background-color: #003247;
+        }
+    
+    </style>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <header class="shadow-sm">
+        <div class="container-fluid bg-primary">
+            <div class="row">
+                <div class="col-2 bg-primary d-md-block d-none text-center">
+                    <img src="/images/esa-jwst-logo.png" alt="logo" class="mt-2" style="width: 100px;">
+                </div>
+                <div class="col-12 col-md-10 px-0">
+
+                    <!-- Topbar-->
+                    <div class="bg-primary px-5">
+                        <div class="">
+                            <div class="row py-3">
+
+                                <div class="col-xl-3 col-lg-4 d-md-block d-none">
+
+                                </div>
+                                <div class="col-10 col-xl-8 col-lg-7">
+                                    <div class="d-flex justify-content-md-end justify-content-between">
+                                        <a class="mx-3 fs-6 text-light" href="/contact"
+                                            style="text-decoration: none;">Contact</a>
+                                        <a class="mx-3 fs-6 text-light" href="/subscribe/"
+                                            style="text-decoration: none;">Subscribe to Hubble News</a>
+                                        <a class="mx-3 fs-6 text-light" href="/sitemap/"
+                                            style="text-decoration: none;">Site
+                                            Map</a>
+                                        <a class="mx-3 fs-6 text-light" href="/search/" style="text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-lg-1 float-end">
+                                    <a class="navbar-general__esa-logo" href="http://www.esa.int">
+                                        <img src="/images/esa-logo.png" width="80px" alt="ESA logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navbar-->
+                    <nav  class="navbar navbar-expand-md navbar-dark bg-secondary rounded-top p-0 m-0">
+                        <div class="container-fluid">
+                            <a class="navbar-brand d-md-none d-block" href="#"><img src="/images/esa-jwst-logo.png"
+                                    width="42px" alt="ESA logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul id="navbar" class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item me-3 py-2">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            News
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Images
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Videos
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Newsletters
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            About
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown me-3 py-2">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Press
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form> -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="container-fluid my-5 mx-3" style="min-height:44rem;">
+
+        <div class="row">
+            <div class="col-8 col-md-5 col-lg-3">
+                <div class="input-group mb-3 ms-1">
+                    <button class="btn btn-primary text-white" button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gear" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                            <path
+                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                        </svg>
+                    </button>
+                    <input type="text" class="form-control border border-primary" placeholder="Search Images..."
+                        aria-label="Search Images..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary text-white" button" id="button-addon2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-4 col-md-7 col-lg-9">
+                <p class="text-end me-5">
+                    <a href="#" class="" style="text-decoration: none; ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-badge-cc" viewBox="0 0 16 16">
+                            <path
+                                d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z" />
+                            <path
+                                d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <h1 class="row ms-1">Images</h1>
+
+        <div class="row">
+            <p class="form-text ms-1">
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    VIEW ALL
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    ANNIVERSARY
+                </a>
+
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    COSMOLOGY
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    EXOPLANETS
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    GALAXIES
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    ILLUSTRATIONS
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    JAMES WEBB SPACE TELESCOPE
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    LAUNCH/SERVICING MISSIONS
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    MISCELLANEOUS
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    NEBULAE
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    QUASARS AND BLACK HOLES
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    SOLAR SYSTEM
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    SPACECRAFT
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    STAR CLUSTERS
+                </a>
+                <a href="#" class="me-3 border border-primary btn-outline-primary p-1 mt-2 d-inline-block"
+                    style="text-decoration: none;">
+                    STARS
+                </a>
+            </p>
+        </div>
+
+        <div id="gallery" class="row me-3 mt-5 my-3">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light"
+                    style="height: 40%;">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2017a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2007a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1509a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1501a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/potw2050a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1608a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/potw1345a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1307a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="https://cdn.spacetelescope.org/archives/images/screen/opo0328a.jpg" class="w-100"
+                        style="height: 300px; object-fit: cover;" />
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mx-5">
+            <div class="col-6">
+                <p>Showing 1 to 1</p>
+            </div>
+            <div class="col-6">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+
+        <div class="row mb-1" >
+            <div class="col-12 text-white text-center">
+                <div class="text-secondary">
+                    <p class="form-text" style="margin: 0px; padding: 0px;"> Usage of ESA/Hubble Images and Videos </p>
+                    <p class="form-text" style="margin: 0px; padding: 0px;"> Are you a journalist? Subscribe to the ESA/Hubble Media Newsletter. </p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+<!-- 
+        <div class="row">
+
+        </div> -->
+
+    </section>
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid px-0">
+
+        <footer class="text-center text-white bg-secondary rounded-top">
+            <!-- Grid container -->
+            <div class="container py-2">
+                <!-- Section: Social media -->
+                <section class="text-white">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                    </a>
+
+                    <!-- Github -->
+                    <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                        </svg>
+                    </a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center bg-primary p-3">
+                <a class="text-white" href="http://www.cdn77.com" style="text-decoration: none;">Accelerated by
+                    CDN77</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+    </div>
+    <!-- End of .container -->
+
+
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
