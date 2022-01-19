@@ -1,5 +1,5 @@
 import './style.css'
-import './countdown.js'
+
 import './audio.js'
 
 import * as THREE from "three";
@@ -60,8 +60,7 @@ window.addEventListener('resize', () => {
 
 // // create camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 4000)
-camera.position.z = 42
-camera.position.x = 0
+
 
 
 // // create camera
@@ -659,7 +658,16 @@ document.getElementById("timeOut").addEventListener("click", () => {
 
 })
 
-var distance = false;
+var distance = true;
+
+document.getElementById('timeNone').classList.add('d-none');
+document.getElementById('statistics').style.visibility = 'visible';
+document.getElementById('pointL2').style.visibility = 'visible';
+for (const pointLine of pointsLine) {
+    pointLine.element.classList.add('visible')
+}
+camera.position.x = 3.049999999999994;
+camera.position.z = -6.140000000000022;
 
 document.getElementById("distance").addEventListener("click", () => {
 
@@ -714,6 +722,61 @@ document.getElementById("rotationModel").addEventListener("click", () => {
 
 })
 
+///////////////////////////////// CLOCK ///////////////////////////////
+
+const getRemainingTime = deadline => {
+    let now = new Date(),
+        remainTime = (now - new Date(deadline) + 1000) / 1000,
+        remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+        remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+        remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+        remainDays = Math.floor(remainTime / (3600 * 24));
+        console.log(now);
+        console.log(new Date(deadline));
+        console.log(now-new Date(deadline));
+        console.log(remainDays);
+        console.log(remainHours);
+        console.log(remainMinutes);
+
+    return {
+      remainSeconds,
+      remainMinutes,
+      remainHours,
+      remainDays,
+      remainTime
+    }
+  };
+  const countdown = (deadline,elem,finalMessage, name) => {
+    const el = document.getElementById(elem);
+    const daysTraveled = document.getElementById('Days traveled');
+    // const distanceTravelend = document.getElementById('Distance traveled');
+  
+    setInterval( () => {
+      let t = getRemainingTime(deadline);
+      el.innerHTML = `
+      
+      <p class="d-inline ">${name} </p>              
+      <p class="d-inline cardCountdown"> ${t.remainDays}d</p>
+      <p class="d-inline cardCountdown"> ${t.remainHours}h</p>
+      <p class="d-inline cardCountdown"> ${t.remainMinutes}m</p>
+      <p class="d-inline cardCountdown"> ${t.remainSeconds}s</p>
+      
+      `;
+      daysTraveled.innerHTML = `${t.remainDays} days and ${t.remainHours} hours`
+    }, 1000)
+    setInterval( () => {
+    let j = getRemainingTime(deadline);
+    circlePo.position.z = 9.5 - (j.remainDays * 1);
+    obj3.position.z = 10 - (j.remainDays * 1);
+
+    }, 5)
+
+  };
+  
+  countdown('Dec 25 2021 07:20:00 GMT-0500', 'clock', '','Journey to L2:')
+
+///////////////////////////////// END CLOCK ///////////////////////////////
+
 function animate() {
     requestAnimationFrame(animate)
     const elapsedTime = clock.getElapsedTime()
@@ -728,31 +791,33 @@ function animate() {
     renderer3.setSize(sizes.width, sizes.height)
     renderer3.render(scene3, camera)
 
-    sphere.rotation.y += 0.002;
-    sphereSun.rotation.y += 0.001;
-    particles.rotation.y += 0.001;
-    //sphere2.rotation.y += 0.003;
-    circlePlanet.rotation.y += 0.001;
+    // sphere.rotation.y += 0.002;
+    // sphereSun.rotation.y += 0.001;
+    // particles.rotation.y += 0.001;
+    // //sphere2.rotation.y += 0.003;
+    // circlePlanet.rotation.y += 0.001;
 
-    if (circlePo.position.z > -1 && distance == true) {
-        circlePo.position.z -= 0.02;
-        obj3.position.z -= 0.02;
+    // if (circlePo.position.z > -1 && distance == true) {
+    //     circlePo.position.z -= 0.02;
+    //     obj3.position.z -= 0.02;
 
-    }
+    // }
 
 
-    obj2.position.y = Math.cos(elapsedTime / 2) * 2;
-    obj2.position.z = Math.sin(elapsedTime / 2) * 2;
+    // obj2.position.y = Math.cos(elapsedTime / 2) * 2;
+    // obj2.position.z = Math.sin(elapsedTime / 2) * 2;
 
-    if (camera.position.x < 5 && distance == true) {
-        camera.position.x += 0.05;
-        camera.position.z -= 0.14;
-    }
+    // if (camera.position.x < 5 && distance == true) {
+    //     camera.position.x += 0.05;
+    //     camera.position.z -= 0.14;
+    //     console.log(camera.position.x)
+    //     console.log(camera.position.z)
+    // }
 
-    if (camera.position.x > 3 && distance == false) {
-        camera.position.x -= 0.05;
-        camera.position.z += 0.14;
-    }
+    // if (camera.position.x > 3 && distance == false) {
+    //     camera.position.x -= 0.05;
+    //     camera.position.z += 0.14;
+    // }
 
 
 
@@ -770,10 +835,10 @@ function animate() {
     //     camera2.position.y = 12
     // }
 
-    if (rotationModel == true) {
-        obj.rotation.y += 0.002;
-        //obj.position.z = Math.sin(elapsedTime/2) * 0.5;
-    }
+    // if (rotationModel == true) {
+    //     obj.rotation.y += 0.002;
+    //     //obj.position.z = Math.sin(elapsedTime/2) * 0.5;
+    // }
 
     controls.update()
 

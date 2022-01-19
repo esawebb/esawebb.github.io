@@ -289,19 +289,17 @@
 
             <div class="col-12  col-xl-4 mb-4">
                 <div id="new" class="card mx-auto">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/stsci-j-p2152b-f-1807x2256.jpg?itok=vnKW18Y3"
-                            class="img-fluid rounded" />
+                    <div class="" data-mdb-ripple-color="light">
+                        <img src="https://esahubble.org/media/archives/newsletters/medium/469.jpg" class="rounded"
+                            style="" />
                         <a href="https://www.google.com">
                             <div class="mask" style="background-color: rgba(249, 49, 84, 0.6);"></div>
                         </a>
                     </div>
                     <div class="card-body ">
-                        <h5 class="card-title ">Webb to Explore Forming Planetary Systems</h5>
+                        <h5 id="titleFeed" class="card-title "></h5>
                         <br>
-                        <p class="card-text text-start">
-                            Planetary systems take millions of years to form, which introduces quite a challenge for
-                            astronomers. How do you identify which stage they are in, or categorize them?
+                        <p id="descriptionFeed" class="card-text text-start">
                         </p>
                         <br>
                         <br>
@@ -372,14 +370,15 @@
                 <blockquote cite="https://www.facebook.com/hubbleESA/" class="fb-xfbml-parse-ignore"><a
                         href="https://www.facebook.com/hubbleESA/">Hubble Space Telescope</a></blockquote>
             </div> -->
-            <div class="embed-responsive embed-responsive-16by9 fb-page col-12 col-xl-6 text-center my-3 mx-auto">
-                <iframe 
-                src="https://www.facebook.com/plugins/page.php?locale=en_US&href=https%3A%2F%2Fwww.facebook.com%2FhubbleESA%2F&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <div
+                class="embed-responsive embed-responsive-16by9 fb-page col-12 col-xl-6 my-3 border border-danger text-center">
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?locale=en_US&href=https%3A%2F%2Fwww.facebook.com%2FhubbleESA%2F&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="100%" height="600" style="border:none;overflow:hidden;margin:auto auto;" scrolling="no"
+                    frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
-           
+
 
             <div class="embed-responsive embed-responsive-16by9 fb-page col-12 col-xl-6 text-center my-3">
                 <a class="twitter-timeline" href="https://twitter.com/ESA_Webb?ref_src=twsrc%5Etfw" data-width="500"
@@ -761,9 +760,8 @@
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
     <script type="text/javascript">
@@ -847,6 +845,41 @@
             playPauseBTN.innerHTML = "Play &#9658"
         }
 
+        var titleFeed = document.getElementById('titleFeed');
+        var descriptionFeed = document.getElementById('descriptionFeed');
+        var i = 0;
+        var myUrl = 'https://blogs.nasa.gov/webb/feed/';
+        var proxy = 'https://secret-ocean-49799.herokuapp.com/';
+        var finalURL = proxy + myUrl;
+        $.get(finalURL, function (data) {
+            console.log(data)
+            $(data).find("item").each(function () { // or "item" or whatever suits your feed
+                var el = $(this);
+                i += 1;
+                if (i == 1) {
+                    titleFeed.innerHTML = el.find("title").text();
+                    descriptionFeed.innerHTML = el.find("description").text();
+                    console.log(i)
+                    console.log("title      : " + el.find("title").text());
+                    console.log("description: " + el.find("description").text());
+                    console.log("content: " + el.find("pubDate").text());
+                    console.log("------------------------");
+                }
+
+            });
+        });
+
+        // var titleFeed = document.getElementById('titleFeed');
+        // var descriptionFeed = document.getElementById('descriptionFeed');
+        // var i = 0;
+        // var myUrl = 'https://blogs.nasa.gov/webb/feed/';
+
+        // var proxy = 'https://secret-ocean-49799.herokuapp.com/';
+
+        // var finalURL = proxy + myUrl;
+        // $.get(finalURL, function( data ) {
+        //     console.log(data);
+        // });
     </script>
 </body>
 
