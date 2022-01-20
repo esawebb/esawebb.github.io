@@ -14,16 +14,41 @@
             overflow-x: hidden;
 
         }
-        #gallery img:hover {
-            border: 5px solid #f7f7f7;
+
+        #gallery .bg-image {
+            position: relative;
+        
         }
-        #navbar li:hover{
+
+        /* #gallery img:hover {
+            border: 5px solid #f7f7f7;
+        } */
+
+        #gallery span {
+            display: none;
+
+        }
+
+        #gallery .bg-image:hover>span {
+            display: inline;
+            position: absolute;
+            color: white;
+            left: 0px;
+            top: 77%;
+            width: 100%;
+            background-color: rgba(0, 50, 71, .6);
+            height: 70px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #navbar li:hover {
             background-color: #003247;
         }
-    
     </style>
 
-    <title>Hello, world!</title>
+    <title>ESA/Webb</title>
 </head>
 
 <body>
@@ -48,7 +73,7 @@
                                         <a class="mx-3 fs-6 text-light" href="/contact"
                                             style="text-decoration: none;">Contact</a>
                                         <a class="mx-3 fs-6 text-light" href="/subscribe/"
-                                            style="text-decoration: none;">Subscribe to Hubble News</a>
+                                            style="text-decoration: none;">Subscribe to Webb News</a>
                                         <a class="mx-3 fs-6 text-light" href="/sitemap/"
                                             style="text-decoration: none;">Site
                                             Map</a>
@@ -70,7 +95,7 @@
                         </div>
                     </div>
                     <!-- Navbar-->
-                    <nav  class="navbar navbar-expand-md navbar-dark bg-secondary rounded-top p-0 m-0">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-secondary rounded-top p-0 m-0">
                         <div class="container-fluid">
                             <a class="navbar-brand d-md-none d-block" href="#"><img src="images/esa-jwst-logo.png"
                                     width="42px" alt="ESA logo"></a>
@@ -80,7 +105,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul id="navbar" class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <ul id="navbar" class="navbar-nav me-auto  mb-0">
                                     <li class="nav-item me-3 py-2">
                                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                                     </li>
@@ -184,8 +209,12 @@
     </header>
     <section class="container-fluid my-5 mx-3" style="min-height:44rem;">
 
-        <div class="row">
-            <div class="col-8 col-md-5 col-lg-3">
+        <div class="row ">
+            <div class="col-3 col-md-5 col-lg-8">
+                <h1 class="row ms-1">Images</h1>
+            </div>
+
+            <div class="col-7 col-md-5 col-lg-3 pt-2">
                 <div class="input-group mb-3 ms-1">
                     <button class="btn btn-primary text-white" button" id="button-addon1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -206,9 +235,9 @@
                         </svg>
                     </button>
                 </div>
+            
             </div>
-
-            <div class="col-4 col-md-7 col-lg-9">
+            <div class="col-1 pt-2">
                 <p class="text-end me-5">
                     <a href="#" class="" style="text-decoration: none; ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
@@ -222,8 +251,6 @@
                 </p>
             </div>
         </div>
-
-        <h1 class="row ms-1">Images</h1>
 
         <div class="row">
             <p class="form-text ms-1">
@@ -293,11 +320,11 @@
 
         <div id="gallery" class="row me-3 mt-5 my-3">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light"
-                    style="height: 40%;">
+                <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2017a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
-                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                    <span class="p-3">Hubble's View of Jupiter and Europa in August 2020</span>
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
                 </div>
@@ -307,7 +334,8 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2007a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
-                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                    <span class="p-3">Tapestry of Blazing Starbirth</span>
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
                 </div>
@@ -317,6 +345,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1509a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">Westerlund 2 — Hubble’s 25th anniversary image</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -327,6 +356,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1501a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">New view of the Pillars of Creation — visible</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -337,6 +367,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/potw2050a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">Rings of Relativity</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -347,6 +378,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1608a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">The Bubble Nebula</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -357,6 +389,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/potw1345a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">Antennae Galaxies reloaded</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -367,6 +400,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/heic1307a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">New infrared view of the Horsehead Nebula — Hubble’s 23rd anniversary image</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -377,6 +411,7 @@
                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
                     <img src="https://cdn.spacetelescope.org/archives/images/screen/opo0328a.jpg" class="w-100"
                         style="height: 300px; object-fit: cover;" />
+                    <span class="p-3">Hubble mosaic of the majestic Sombrero Galaxy</span>
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
@@ -391,31 +426,32 @@
             <div class="col-6">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-end">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                      </li>
-                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
                     </ul>
-                  </nav>
+                </nav>
             </div>
         </div>
 
-        <div class="row mb-1" >
+        <div class="row mb-1">
             <div class="col-12 text-white text-center">
                 <div class="text-secondary">
-                    <p class="form-text" style="margin: 0px; padding: 0px;"> Usage of ESA/Hubble Images and Videos </p>
-                    <p class="form-text" style="margin: 0px; padding: 0px;"> Are you a journalist? Subscribe to the ESA/Hubble Media Newsletter. </p>
+                    <p class="form-text" style="margin: 0px; padding: 0px;"> Usage of ESA/Webb Images and Videos </p>
+                    <p class="form-text" style="margin: 0px; padding: 0px;"> Are you a journalist? Subscribe to the
+                        ESA/Webb Media Newsletter. </p>
                 </div>
             </div>
             <br>
         </div>
 
-<!-- 
+        <!-- 
         <div class="row">
 
         </div> -->
