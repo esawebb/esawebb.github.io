@@ -20,31 +20,59 @@
 
         }
 
-        /* #gallery img:hover {
-            border: 5px solid #f7f7f7;
-        } */
-
-        #gallery span {
-            display: none;
-
-        }
-
-        #gallery .bg-image:hover>span {
+        .video-title {
             display: inline;
             position: absolute;
             color: white;
             left: 0px;
-            top: 77%;
             width: 100%;
-            background-color: rgba(0, 50, 71, .6);
+            background-color: rgba(0, 50, 71, 1);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .play-icon {
+            display: inline;
+            position: absolute;
+            color: white;
+            left: 0px;
+            top: 45%;
+            width: 100%;
+
             height: 70px;
             display: flex;
             align-items: center;
 
+
         }
 
-        #navbar li:hover {
-            background-color: #003247;
+        .youtube-body {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+
+        .youtube-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .youtube-title {
+            display: inline;
+            position: absolute;
+            color: white;
+            left: 0px;
+            top: 100%;
+            width: 100%;
+            background-color: rgba(0, 50, 71, 1);
+            height: 70px;
+            display: flex;
+            align-items: center;
         }
     </style>
 
@@ -208,188 +236,87 @@
         </div>
     </header>
 
-    <section class="py-5">
-        <div class="container py-3 ">
-            <div class="row  mx-md-3 mx-xl-5">
-                <div class="">
-                    <h3 class="">FAQ - Frequently Asked Questions</h3>
-                    <p class="lead mb-5 mt-5">Answers to a variety of Frequently Asked Questions are provided below. You can also ask questions to the ESA/Webb outreach team <a title="contact Webb" class="text-info"
-                            href="mailto:info@esawebb.org">here</a>.</p>
-                    <!-- FAQ ACCORDION-->
-                    <div class="mb-3">
+    <section class="container-fluid my-5 mx-3" style="min-height:44rem;">
 
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        1. How many observations has Webb made over the years?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        In Summer 2011, Webb passed the landmark of its millionth observation, by
-                                        making a spectroscopic analysis of the atmosphere of exoplanet HAT-P-7b. Nearly
-                                        4000 observing programmes have been carried out or are pending since launch in
-                                        1990.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        2. Why do some Webb pictures have a strange staircase-like shape?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Webb has a number of instruments on board — essentially, advanced digital
-                                        cameras — that have been regularly upgraded and replaced during the five
-                                        servicing missions to Webb. The Wide Field and Planetary Camera 2 (WFPC2),
-                                        which was operational between 1994 and 2010, produced images with an unusual
-                                        staircase-like shape.
 
-                                        This is because the camera was made up of four light detectors with overlapping
-                                        fields of view, one of which gave a higher magnification than the other three.
-                                        When the four images are combined together into one picture, the high
-                                        magnification image needs to be reduced in size for the image to align properly.
-                                        This produces an image with a layout that looks like three steps. An example of
-                                        one of these is here: http://www.spacetelescope.org/images/opo0331b/
 
-                                        Note that many of the images on spacetelescope.org are cropped and so do not
-                                        have this shape even if they do come from WFPC2.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        3. What is your copyright policy? Can I use images or videos from Webb on my
-                                        website/project/TV programme?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Yes. Unless explicitly stated otherwise, all the images and videos on
-                                        ESAWebb.org are available for use without prior permission and without charge.
-                                        You must however include a credit — the credit required for each image or video
-                                        is listed along with the caption. Our full copyright policy is available on this
-                                        link: http://www.ESAWebb.org/copyright/
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseTFour">
-                                        4. Does Webb ever get hit by space debris or can it be affected by adverse space
-                                        conditions?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Yes, although it has never experienced serious damage.
+        <div id="gallery" class="row">
 
-                                        In Webb’s lifetime, the solar panels have been replaced several times, and the
-                                        old panels brought down to Earth. Close inspection of these shows small cracks
-                                        and chips on the surface caused by tiny particles that have hit Webb. There is
-                                        also a small hole (around a centimetre in diameter) on one of the high-gain dish
-                                        antennas on the telescope, caused by an unknown object hitting it!
-
-                                        The radiation that Webb is exposed to in space also causes some degradation to
-                                        its instruments, though this is mitigated since the instruments have regularly
-                                        been replaced throughout Webb’s life.
-
-                                        Coronal mass ejections from the Sun are not a major risk, as it is in a low
-                                        enough orbit that the Earth’s magnetic field provides protection.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        5. Why do stars have a cross-shaped distortion in most Webb images? Why do
-                                        galaxies not?
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        The cross shape visible on bright objects (such as stars) in Webb images is a
-                                        form of distortion that is visible in all telescopes that use a mirror rather
-                                        than a lens to focus light rays. The crosses, known as diffraction spikes, are
-                                        caused by the light’s path being disturbed slightly as it passes by the
-                                        cross-shaped struts that support the telescope’s secondary mirror.
-
-                                        It is only noticeable for bright objects where a lot of light is concentrated on
-                                        one spot, such as stars. Darker, more spread-out objects like nebulae or
-                                        galaxies do not show visible levels of this distortion.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        6. How do you protect and clean the lens of the Webb Space Telescope?
-                                    </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Webb doesn’t have a lens. Like all large telescopes, Webb uses a curved
-                                        mirror to focus starlight. This mirror is located deep inside the telescope,
-                                        protected by its long tube-like structure. As there is no atmosphere around
-                                        Webb, there is no risk of dust or corrosion reaching inside.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSeven" aria-expanded="false"
-                                        aria-controls="collapseSeven">
-                                        7. Will Webb be brought back to Earth when it has served out its usefulness, or
-                                        will it be destroyed?
-                                    </button>
-                                </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse"
-                                    aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        With the retirement of NASA’s space shuttle fleet in 2011, there are no
-                                        spacecraft currently in operation that could collect Webb and return it to
-                                        Earth. Webb’s orbit is relatively stable, so it will not be immediately
-                                        de-orbited when it stops working. However it will eventually need to be brought
-                                        down in a controlled re-entry to ensure that any debris does not land in
-                                        inhabited areas — Webb is too big to fully burn up in the atmosphere.
-
-                                        During the final servicing mission in 2009, a docking device was fitted onto the
-                                        base of the telescope so that a rocket can easily attach and safely de-orbit the
-                                        telescope once its mission is complete.
-                                    </div>
-                                </div>
-                            </div>
+            <div class="modal fade " id="popup-youtube" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content" style="background: none; border: none;">
+                        <div class="modal-header" style="border: none;">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body youtube-body">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/09H9xgwGycw"
+                                class="youtube-video" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer m-0 p-0" style="border: none;">
+                            <a class="youtube-title form-text m-0 p-0 text-white btn btn-outline-secondary border-0 rounded-0"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-download mx-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="">Hubble's View of </span>
+                            </a>
 
                         </div>
-
                     </div>
+                </div>
+            </div>
 
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                <div class="gallery">
+
+                    <div class="video-thumbnail">
+                        <div class="img-wrapper bg-image">
+
+
+                            <a class="popup-youtube" data-bs-toggle="modal" data-bs-target="#popup-youtube"
+                                data-youtube-id="{{ video.youtube_video_id }}" data-title="{{ video.title }}"
+                                data-url="{{ video.get_absolute_url }}">
+
+
+                                <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2007a.jpg"
+                                    class="w-100" style="height: 300px; object-fit: cover;" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-play-fill play-icon btn text-whi" viewBox="0 0 16 16">
+                                    <path
+                                        d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                </svg>
+
+                            </a>
+                            <a class="video-title form-text mt-0 text-white btn btn-outline-secondary border-0 rounded-0"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-download mx-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="">Hubble's View of </span>
+                            </a>
+
+
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
     </section>
-
 
     <!-- Footer -->
     <div class="container-fluid px-0">
@@ -453,21 +380,24 @@
             <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </a>
-            
+
             <!-- Modal -->
-            <div class="modal fade "  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-xl">
-                <div class="modal-content" style="background: none; border: none;">
-                    <div class="modal-header" style="border: none;">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-content" style="background: none; border: none;">
+                        <div class="modal-header" style="border: none;">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2017a.jpg" class="w-100"
+                                style="height: 70vh; object-fit: cover;">
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <p>Hubble's View of Jupiter and Europa in August 2020</p>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <img src="https://cdn.spacetelescope.org/archives/images/screen/heic2017a.jpg" class="w-100" style="height: 70vh; object-fit: cover;">
-                    </div>
-                    <div class="modal-footer" style="border: none;">
-                    <p>Hubble's View of Jupiter and Europa in August 2020</p>
-                    </div>
-                </div>
                 </div>
             </div>
         </footer>
